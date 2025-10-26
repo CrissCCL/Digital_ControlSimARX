@@ -39,7 +39,7 @@ The discrete model implemented is:
 y(k) = -a(2)*y1 - a(3)*y2 - a(4)*y3  + b(1)*u1 + b(2)*u2 + b(3)*u3+ b(4)*u4;
 ```
 
-- Sampling period: $$T_s = 0.004\,s$$  
+- Sampling period: $$T_s = 0.004 s$$  
 - This model was identified from experimental data using **ARX method**.
 
 ## ⚙️ Digital PI Controller (Incremental Form)
