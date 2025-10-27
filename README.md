@@ -84,11 +84,11 @@ Without saturation, simulation results may falsely assume an ideal actuator with
 To emulate real microcontroller behavior — such as PWM range or fixed DAC limits — 
 
 ```matlab
-if Usim(i) > 100
-    Usim(i)=100;
+if u > 100
+    u=100;
 end
-if Usim(i) <-100
-    Usim(i)=-100;
+if u <-100
+    u=-100;
 end
 ```
 Below are example plots generated with the script:
