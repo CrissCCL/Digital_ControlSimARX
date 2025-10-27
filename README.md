@@ -55,6 +55,22 @@ error  = Ref(k) - y(k);
 u  = u1 + K0*error + K1*error1;
 ```
 
+With tuning parameters derived from:
+- Proportional gain: $$K_p$$
+- Integral time: $$T_i$$
+- Sampling time: $$T_s$$
+
+Where
+
+$$
+K_0 = K_p + \frac{K_p}{2T_i}T_s
+$$
+
+$$
+K_1 = -K_p + \frac{K_p}{2T_i}T_s
+$$
+
+
 ## 🔒 Actuator Saturation
 To emulate microcontroller behavior, the controller output is **limited to a predefined range**:
 
