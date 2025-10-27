@@ -22,8 +22,12 @@ error1 = 0;                    % past error
 Usim = zeros(1,length(t));
 
 %% PI controller parameters
-K0 = -11.8371;
-K1 = 11.3794;
+Kp = -11.6083; % propotional gain 
+Ti = 0.1014; % integral time
+
+%% PI controller parameters discretization 
+K0 = Kp + Kp*Ts/(2*Ti);
+K1 = -Kp + Kp*Ts/(2*Ti);
 
 %% Saturation limits
 Umax = 100;
@@ -38,13 +42,13 @@ for k = 1:length(t)
     error = Ref(k) - y(k);
 
     % PI control (incremental form)
-    Usim(k) = u1 + K0*error + K1*error1;
+    u = u1 + K0*error + K1*error1;
 
     % Saturation
-    if Usim(k) > Umax
-        Usim(k) = Umax;
-    elseif Usim(k) < Umin
-        Usim(k) = Umin;
+    if u > Umax
+        u = Umax;
+    elseif u < Umin
+        u = Umin;
     end
 
     % Update past values
@@ -54,8 +58,9 @@ for k = 1:length(t)
     u4 = u3; 
     u3 = u2; 
     u2 = u1; 
-    u1 = Usim(k);
+    u1 = u;
     error1 = error;
+    Usim(k)=u;
 end
 
 %% Plot results
