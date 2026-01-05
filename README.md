@@ -29,6 +29,7 @@ $$
 $$
 B(z) = -0.001961 z^{-3}
 $$
+
 Matlab
 ```Matlab
 a = [1  -1.9366 1.1523 -0.2144]; % note the sign for implementation
@@ -59,6 +60,7 @@ The discrete control law implemented is:
 $$
 u(k) = u(k-1) + K_0 e(k) + K_1 e(k-1)
 $$
+
 Matlab
 ```Matlab
 error  = Ref(k) - y(k);
@@ -97,6 +99,7 @@ Example: -100% ≤ u(n) ≤ 100%
 
 Without saturation, simulation results may falsely assume an ideal actuator with infinite authority, which never matches microcontroller deployments.
 To emulate real microcontroller behavior — such as PWM range or fixed DAC limits — 
+
 Matlab
 ```Matlab
 if u > 100
