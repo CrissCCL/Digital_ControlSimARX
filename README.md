@@ -98,7 +98,8 @@ Below are example plots generated with the script:
 </p>
 
 
-
+## 🤝 Support projects
+ Support me on Patreon [https://www.patreon.com/c/CrissCCL](https://www.patreon.com/c/CrissCCL)
 
 ## 📜 License
 MIT License
