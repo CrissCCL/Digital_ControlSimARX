@@ -41,6 +41,7 @@ a = np.array([1, -1.9366, 1.1523, -0.2144], dtype=float)  # note the sign for im
 b = np.array([0, 0, 0, -0.001961], dtype=float)           # B(z) with zeros for delays
 ```
 The discrete model implemented is:
+
 Matlab
 ```Matlab
 y(k) = -a(2)*y1 - a(3)*y2 - a(4)*y3  + b(1)*u1 + b(2)*u2 + b(3)*u3+ b(4)*u4;
