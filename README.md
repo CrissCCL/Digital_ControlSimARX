@@ -29,11 +29,11 @@ $$
 $$
 B(z) = -0.001961 z^{-3}
 $$
-```Matlab
+```matlab
 a = [1  -1.9366 1.1523 -0.2144]; % note the sign for implementation
 b = [0 0 0 -0.001961];       % B(z) with zeros for delays
 ```
-```Python
+```python
 a = np.array([1, -1.9366, 1.1523, -0.2144], dtype=float)  # note the sign for implementation
 b = np.array([0, 0, 0, -0.001961], dtype=float)           # B(z) with zeros for delays
 ```
@@ -43,7 +43,7 @@ The discrete model implemented is:
 y(k) = -a(2)*y1 - a(3)*y2 - a(4)*y3  + b(1)*u1 + b(2)*u2 + b(3)*u3+ b(4)*u4;
 ```
 ```Python
-    y[k] = (-a[1] * y1 -a[2] * y2-a[3] * y3 + b[0] * u1 + b[1] * u2 + b[2] * u3 + b[3] * u4)
+y[k] = (-a[1] * y1 -a[2] * y2-a[3] * y3 + b[0] * u1 + b[1] * u2 + b[2] * u3 + b[3] * u4)
 ```
 
 - Sampling period: $$T_s = 0.004 s$$  
