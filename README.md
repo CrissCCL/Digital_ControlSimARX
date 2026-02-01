@@ -1,5 +1,13 @@
 # 🧪 Digital Control Simulation — ARX Model + Saturation
 
+![MATLAB](https://img.shields.io/badge/MATLAB-Simulation-blue)
+![Python](https://img.shields.io/badge/Python-Analysis-green)
+![SystemID](https://img.shields.io/badge/System%20ID-ARX%2FARMAX-orange)
+![Control](https://img.shields.io/badge/Control-Digital-lightgrey)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
+## Overview
+
 This repository provides a **tutorial-oriented simulation** of a **digital PI control loop** applied to a **discrete-time ARX model** identified from experimental data.  
 The objective is to reproduce in simulation the **same discrete behavior** expected when the controller is later implemented on a **microcontroller** (Arduino, Teensy, ESP32, etc.), including **actuator saturation**.
 
